@@ -13,10 +13,10 @@ SELECT
 	isc.TABLE_NAME AS 'Table Name',
 	COLUMN_NAME AS 'Column Name',
 	COLUMN_TYPE AS 'Column Type',
-    COLUMN_DEFAULT AS 'Default',
-    IS_NULLABLE AS 'NULL',
-    COLUMN_KEY AS 'Key Type',
-    COLUMN_COMMENT AS 'Comment'
+	COLUMN_DEFAULT AS 'Default',
+	IS_NULLABLE AS 'NULL',
+	COLUMN_KEY AS 'Key Type',
+	COLUMN_COMMENT AS 'Comment'
     
     
 	FROM INFORMATION_SCHEMA.COLUMNS isc 
