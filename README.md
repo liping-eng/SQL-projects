@@ -6,10 +6,10 @@
 
 ####
 #### Thought process
-1. First, the idea is to get the data dictionary of all the tables in a Schema. Schema is selected using **USE**.
+1. First, the idea is to get the data dictionary of all the tables in a Schema. Schema is selected using **USE**. <br>
   1a. **database()** or **schema()** are keywords in MySQL and can be used to select the current schema being pointed at.
  
- 2.  **SELECT** columns in **INFOMATION_SCHEMA.COLUMNS**. **INFOMATION_SCHEMA.COLUMNS** contains all information of columns in all Schemas. To specify the desired Schema, a **WHERE** clause is used to filter where the **isc.TABLE_SCHEMA** equals to **database** selected in Step 1.
+ 2.  **SELECT** columns in **INFOMATION_SCHEMA.COLUMNS**. **INFOMATION_SCHEMA.COLUMNS** contains all information of columns in all Schemas. To specify the desired Schema, a **WHERE** clause is used to filter where the **isc.TABLE_SCHEMA** equals to **database** selected in Step 1. <br>
   2a. Information includes: Column Name, Column Type (data type), Column Default Value, NULLABLE, Column Key Type, Column Comment. 
  
  3. **INFORMATION_SCHEMA.TABLES** stores **TABLE_NAME** and **TABLE_TYPE**. An additional filter is applied to **isc.TABLE_NAME** to get only **ist.TABLE_TYPE** of _'BASE TABLE'_. The condition is true when the **ist.TABLE_NAME** is of type _'BASE TABLE' in **INFORMATION_SCHEMA.TABLES**.
