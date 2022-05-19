@@ -24,9 +24,9 @@
 ####
 
 ####
-Learnings / Basic Queries
+#### Learnings / Basic Queries
 
-#### From Challenge 2: 
+##### From Challenge 2: 
 To filter ROWS of first table using another table:
 > SELECT from t1 WHERE t1.column1 IN (SELECT t2.column1 FROM t2 WHERE t2.column2 = <condition>)
 
